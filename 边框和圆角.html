@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>边框</title>
+  <style>
+    div {
+      border: 2px solid #a1a1a1;
+      padding: 10px 40px;
+      width: 300px;
+
+      border-radius: 0px 10px;
+      box-shadow: 15px 35px 10px #a1a1a1;
+    }
+
+    #round{
+      margin-top: 50px;
+      border:15px solid transparent;
+      width:250px;
+      padding:10px 20px;
+      -webkit-border-image:url(img/border.png) 30 30 round; /* Safari 5 and older */
+      -o-border-image:url(img/border.png) 30 30 round; /* Opera */
+      border-image:url(img/border.png) 30 30 round;
+
+      background-color: hotpink;
+      background-clip: border-box;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    border-radius 属性允许为元素添加圆角边框<br>
+    box-shadow 属性添加阴影
+  </div>
+
+  <div id="round">这里，图像平铺（重复）来填充该区域。</div>
+</body>
+</html>

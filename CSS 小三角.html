@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS小三角</title>
+  <style>
+    :root {
+      /* 根目录下定义全局变量 */
+      --pointSize: 10px
+    }
+    .box1 {
+      width: 0;
+      height: 0;
+      border-top: 10px solid pink;
+      border-right: 10px solid rebeccapurple;
+      border-bottom: 10px solid cornflowerblue;
+      border-left: 10px solid darkseagreen;
+    }
+    .box2 {
+      width: 0;
+      height: 0;
+      /* 下两行代码兼容低版本浏览器 */
+      line-height: 0;
+      font-size: 0;
+      /* 通过边框调整大小 */
+      border: 10px solid transparent;
+      border-bottom-color: pink;
+    }
+
+    .jd {
+      position: relative;
+      width: 120px;
+      height: 249px;
+      background-color: pink;
+    }
+    .jd span {
+      position: absolute;
+      right: 10px;
+      top: calc(var(--pointSize) * -2);
+      width: 0;
+      height: 0;
+      line-height: 0;
+      font-size: 0;
+      border: var(--pointSize) solid transparent;
+      border-bottom-color: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <br><br><br><br><br>
+  <div class="jd">
+    <span></span>
+  </div>
+</body>
+</html>
