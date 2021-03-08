@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    ul li {
+      float: left;
+      list-style: none;
+      width: 150px;
+      height: 200px;
+      border: 1px solid slateblue;
+      margin-left: -1px;
+    }
+
+    ul li:hover {
+      /* 方法一 */
+      position: relative;
+      border: 1px solid salmon;
+
+      /* 方法二 */
+      z-index: 1;
+      border: 1px solid salmon;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ul>
+</body>
+</html>
