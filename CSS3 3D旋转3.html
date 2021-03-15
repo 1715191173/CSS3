@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3 3D旋转</title>
+  <style>
+    body {
+      perspective: 500px;
+    }
+    .box1 {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin: 100px auto;
+      transition: all .5s;
+      transform-style: preserve-3d;
+    }
+    .box1:hover {
+      transform: rotateY(180deg);
+    }
+    .front,
+    .back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      font-size: 30px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 300px;
+    }
+    .front {
+      background-color: pink;
+      z-index: 1;
+    }
+    .back {
+      background-color: cornflowerblue;
+      transform: rotateY(180deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="box1">
+    <div class="front">CSS3世界</div>
+    <div class="back">欢迎你</div>
+  </div>
+</body>
+</html>

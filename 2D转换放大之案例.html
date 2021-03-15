@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    div {
+      overflow: hidden;
+      float: left;
+      margin: 10px;
+    }
+    div>a>img {
+      width: 250px;
+      transition: all 0.3s;
+    }
+    div img:hover {
+      transform: scale(1.1);
+    }
+
+    .clearfix:before,
+    .clearfix:after{
+      content: "";
+      display: table;
+      clear: both;
+    }
+    .clearfix{
+      zoom: 1
+    }
+    li {
+      float: left;
+      width: 30px;
+      height: 30px;
+      margin: 10px;
+      border: 2px solid pink;
+      text-align: center;
+      line-height: 30px;
+      list-style: none;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all .4s;
+    }
+    li:hover {
+      transform: scale(1.2);
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <a href="#"><img src="img/bd.jpg" alt=""></a>
+  </div>
+  <div>
+    <a href="#"><img src="img/bd.jpg" alt=""></a>
+  </div>
+  <div>
+    <a href="#"><img src="img/bd.jpg" alt=""></a>
+  </div>
+
+  <br>
+  <ul class="clearfix">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+  </ul>
+</body>
+</html>

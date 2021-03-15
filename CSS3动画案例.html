@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3动画案例</title>
+  <style>
+    .animation {
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      background: url("img/test.jpg") no-repeat;
+      background-size: 640px 160px;
+      animation: main 0.5s steps(4) infinite, move 5s linear forwards;
+    }
+    @keyframes move {
+      0% {
+        left: 0;
+      }
+      100% {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    @keyframes main {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: -640px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="animation"></div>
+</body>
+</html>

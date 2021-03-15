@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3过渡效果</title>
+  <style>
+    div.a {
+      width: 200px;
+      height: 100px;
+      background-color: slateblue;
+      transition: all 3s;
+    }
+
+    div.a:hover {
+      width: 400px;
+      height: 200px;
+      background-color: skyblue;
+    }
+
+    .bar {
+      width: 150px;
+      height: 15px;
+      border: 2px solid skyblue;
+      border-radius: 7px;
+    }
+    .bar_in {
+      width: 10%;
+      height: 100%;
+      background-color: skyblue;
+      transition: all, 0.7s;
+    }
+    .bar:hover .bar_in {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="a"></div>
+  <br><br><br>
+  <div class="bar">
+    <div class="bar_in"></div>
+  </div>
+</body>
+</html>

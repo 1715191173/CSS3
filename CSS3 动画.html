@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS3动画</title>
+  <style>
+    @keyframes test1 {
+      0% {
+        transform: translateX(0px);
+      }
+      100% {
+        transform: translateX(1000px);
+      }
+    }
+    .test1 {
+      width: 200px;
+      height: 200px;
+      background-color: mediumslateblue;
+      animation-name: test1;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    .map {
+      position: relative;
+      width: 820px;
+      height: 546px;
+      background: url("img/map.jpg") no-repeat;
+      margin: 0 auto;
+    }
+    .city {
+      position: absolute;
+      top: 206px;
+      right: 241px;
+      color: #fff;
+    }
+    .dotted {
+      width: 8px;
+      height: 8px;
+      background-color: #09f;
+      border-radius: 50%;
+    }
+
+    .city div[class^="pulse"] {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 8px;
+      box-shadow: 0 0 12px #009dfd;
+      border-radius: 50%;
+      animation: pulse 1.2s linear infinite;
+    }
+    .city div.pulse2 {
+      animation-delay: 0.5s;
+    }
+    .city div.pulse3 {
+      animation-delay: 1s;
+    }
+    .a {
+      top: 224px;
+      right: 569px;
+    }
+    .type {
+      overflow: hidden;
+      font-size: 20px;
+      width: 0;
+      height: 30px;
+      background-color: cornflowerblue;
+      white-space: nowrap;
+      animation: w 4s steps(10) forwards;
+    }
+
+    @keyframes pulse {
+      0% {
+      }
+      70% {
+        width: 40px;
+        height: 40px;
+        opacity: 1;
+      }
+      100% {
+        width: 65px;
+        height: 65px;
+        opacity: 0;
+      }
+    }
+
+    @keyframes w {
+      0% {
+        width: 0;
+      }
+      100% {
+        width: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="test1"></div>
+  <br><br><br>
+  <div class="map">
+    <div class="city">
+      <div class="dotted"></div>
+      <div class="pulse1"></div>
+      <div class="pulse2"></div>
+      <div class="pulse3"></div>
+
+    </div>
+    <div class="city a">
+      <div class="dotted"></div>
+      <div class="pulse1"></div>
+      <div class="pulse2"></div>
+      <div class="pulse3"></div>
+
+    </div>
+    <div class="city b">
+      <div class="dotted"></div>
+      <div class="pulse1"></div>
+      <div class="pulse2"></div>
+      <div class="pulse3"></div>
+
+    </div>
+  </div>
+  <br><br><br>
+  <div class="type">滴滴这里是打字机效果</div>
+</body>
+</html>
